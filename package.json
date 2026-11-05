@@ -1,0 +1,36 @@
+{
+  "name": "gerador-certificados-pdfkit",
+  "version": "1.0.0",
+  "description": "CLI que lê participantes de uma planilha (SheetJS) e gera certificados em PDF com PDFKit, com código de verificação SHA-256.",
+  "type": "module",
+  "main": "src/gerador.js",
+  "bin": {
+    "gerar-certificados": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "exemplo": "node scripts/gerar-exemplo.js && node src/cli.js saidas/participantes.xlsx --evento \"Semana de Tecnologia 2026\" --carga 8 --data 2026-11-05 --instituicao \"Faculdade de Computação\" --local \"São Paulo\" --responsavel \"Profa. Helena Martins\" --cargo \"Coordenadora do evento\"",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pdfkit",
+    "pdf",
+    "certificado",
+    "sheetjs",
+    "xlsx",
+    "cli"
+  ],
+  "author": "sidsidoso",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidsidoso/gerador-certificados-pdfkit.git"
+  },
+  "dependencies": {
+    "pdfkit": "^0.20.2",
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  }
+}
